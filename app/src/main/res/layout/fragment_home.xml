@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topLayoutWithDueCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/home_background_intial_gradient"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/scoreAndActionRecommendedLayout"
+                    >
+
+
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:translationX="0dp"
+                    android:translationY="0dp"
+                    android:text="@string/welcome"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_charcoal"
+                    android:fontFamily="@font/basier_circle_bold"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/profileImg"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="98dp"
+                    android:padding="0dp"
+                    android:src="@drawable/ic_profile"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/ic_rectangular_border"
+                    app:layout_constraintBottom_toBottomOf="@id/profileImg"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toStartOf="@id/profileImg">
+
+
+
+                    <TextView
+                        android:id="@+id/coinAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="20dp"
+                        android:text="4,561"
+                        android:textSize="16sp"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/basier_circle_medium"
+                        android:textColor="@color/dark_charcoal"
+                        android:textAlignment="textEnd"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:drawableStartCompat="@drawable/ic_chips" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/totalDueLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="25dp"
+                app:layout_constraintVertical_bias="0"
+                android:background="@drawable/ic_card_rectangle"
+                app:layout_constraintTop_toBottomOf="@id/welcome"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/totalDueInnerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/ic_card_rectangle"
+                  >
+
+
+                    <TextView
+                        android:id="@+id/totalDueText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="21dp"
+                        android:text="@string/total_due"
+                        android:textSize="10sp"
+                        android:fontFamily="@font/basier_circle_medium"
+                        android:textColor="#FF131414"
+                        android:textAlignment="textStart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.robinhood.ticker.TickerView
+                        android:id="@+id/totalDue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginEnd="11dp"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:ticker_defaultCharacterList="number"
+                        android:layout_marginTop="12dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/creditCardsLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/totalDue">
+
+                        <View
+                            android:id="@+id/separator"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="23dp"
+                            android:layout_marginEnd="23dp"
+                            android:layout_marginTop="15dp"
+                            android:background="#FFE6EAE9"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/cardList"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintTop_toBottomOf="@id/separator" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/payNowLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#FF00C197"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="20dp"
+                            android:visibility="gone"
+                            android:background="@drawable/ic_rectangular_border"
+                            app:layout_constraintTop_toBottomOf="@id/cardList"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <TextView
+                                android:id="@+id/payNow"
+                                android:layout_width="match_parent"
+                                android:layout_height="16dp"
+                                android:text="@string/pay_now"
+                                android:textSize="12sp"
+                                android:gravity="center"
+                                android:fontFamily="@font/basier_circle_regular"
+                                android:fontWeight="500"
+                                android:textColor="#FFFFFFFF"
+                                android:textAlignment="center"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <TextView
+                                android:id="@+id/earnRewards"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="5dp"
+                                android:text="@string/earn_1_percent_chip"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                android:gravity="center"
+                                android:drawablePadding="4dp"
+                                app:layout_constraintTop_toBottomOf="@id/payNow"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:drawableLeftCompat="@drawable/ic_chips" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/scoreAndActionRecommendedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="33dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topLayoutWithDueCard">
+
+
+                    <TextView
+                        android:id="@+id/creditScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="24dp"
+                        android:text="@string/your_credit_score"
+                        android:textSize="10sp"
+                        android:textColor="#FF6E7170"
+                        android:textAlignment="textStart"
+                        android:fontFamily="@font/basier_circle_medium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scoreCardLayout"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="14dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@color/green"
+                        app:layout_constraintTop_toBottomOf="@id/creditScore">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:background="@drawable/cash_instant_linear_gradient"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/creditScoreLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:padding="10dp"
+                        android:background="@color/white"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        >
+
+
+                        <ImageView
+                            android:id="@+id/creditHealthMeter"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="0dp"
+                            android:src="@drawable/credit_health_meter"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <TextView
+                            android:id="@+id/poweredBy"
+                            android:layout_width="70dp"
+                            android:layout_height="14dp"
+                            android:text="@string/powered_by"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/basier_circle_medium"
+                            android:layout_marginStart="11dp"
+                            android:textColor="#FFCACFCF"
+                            android:textAlignment="viewStart"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/creditHealthMeter" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="18.9dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/experian_logo"
+                            app:layout_constraintTop_toBottomOf="@id/poweredBy"
+                            app:layout_constraintStart_toStartOf="@id/poweredBy" />
+
+                        <TextView
+                            android:id="@+id/creditScores"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="799"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/basier_circle_medium"
+                            android:textColor="#FF131414"
+                            android:gravity="end"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/totalCreditScores" />
+
+                        <TextView
+                            android:id="@+id/totalCreditScores"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="43dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="/900"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/basier_circle_medium"
+                            android:textColor="#FFCACFCF"
+                            android:gravity="end"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/rightArrow" />
+
+                        <TextView
+                            android:id="@+id/status"
+                            android:layout_width="62dp"
+                            android:layout_height="14dp"
+                            android:layout_marginStart="37dp"
+                            android:layout_marginTop="1dp"
+                            android:text="@string/very_good"
+                            android:textSize="10sp"
+                            android:fontFamily="@font/basier_circle_bold"
+                            android:textColor="#FF00C197"
+                            android:gravity="end"
+                            app:layout_constraintEnd_toEndOf="@id/totalCreditScores"
+                            app:layout_constraintTop_toBottomOf="@id/totalCreditScores" />
+
+                        <ImageView
+                            android:id="@+id/rightArrow"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:src="@drawable/ic_chevron_right" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/actionRecommended"
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="24dp"
+                        android:text="@string/action_recommended"
+                        android:fontFamily="@font/basier_circle_medium"
+                        android:textSize="10sp"
+                        android:layout_marginTop="33dp"
+                        android:textColor="#FF6E7170"
+                        android:textAlignment="textStart"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/scoreCardLayout" />
+
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/cheq_banner"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintTop_toBottomOf="@id/actionRecommended"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

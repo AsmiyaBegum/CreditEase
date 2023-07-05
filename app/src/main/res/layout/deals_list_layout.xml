@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="147dp"
+            android:layout_height="260dp"
+            android:layout_margin="8dp"
+            card_view:cardCornerRadius="15dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:background="#ABF1E9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="142dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="visible"
+                    card_view:cardCornerRadius="15dp"
+                    card_view:layout_constraintBottom_toBottomOf="parent"
+                    card_view:layout_constraintStart_toStartOf="parent"
+                    card_view:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cardLayout"
+                        android:background="#FF8803"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/topCurveShapedLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:background="@drawable/curve_shaped"
+                            card_view:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/shopLogo"
+                                android:layout_width="74dp"
+                                android:layout_height="32dp"
+                                android:background="@drawable/ic_swiggy_logo"
+                                card_view:layout_constraintStart_toStartOf="parent"
+                                card_view:layout_constraintEnd_toEndOf="parent"
+                                card_view:layout_constraintTop_toTopOf="parent"
+                                card_view:layout_constraintBottom_toBottomOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            card_view:layout_constraintBottom_toBottomOf="parent"
+                            card_view:layout_constraintTop_toBottomOf="@id/topCurveShapedLayout">
+
+                            <TextView
+                                android:id="@+id/amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="33.5dp"
+                                android:layout_marginEnd="33.5dp"
+                                android:layout_marginTop="14dp"
+                                android:text="₹1000"
+                                android:textSize="28sp"
+                                android:textColor="#FFFFFFFF"
+                                android:textAlignment="center"
+                                card_view:layout_constraintStart_toStartOf="parent"
+                                card_view:layout_constraintEnd_toEndOf="parent"
+                                card_view:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/chipValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="53dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_marginEnd="41dp"
+                                android:text="1 = ₹1.00"
+                                android:textSize="12sp"
+                                android:textColor="#FFFFFFFF"
+                                android:textAlignment="textEnd"
+                                card_view:layout_constraintTop_toBottomOf="@id/amount"
+                                card_view:layout_constraintStart_toStartOf="parent"
+                                card_view:layout_constraintEnd_toEndOf="parent"
+                                card_view:drawableStartCompat="@drawable/ic_chips" />
+
+                            <TextView
+                                android:id="@+id/claimNow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Claim Now"
+                                android:textSize="14sp"
+                                android:textColor="#FFFFFFFF"
+                                android:textAlignment="center"
+                                android:layout_marginTop="25dp"
+                                android:layout_marginStart="31dp"
+                                android:layout_marginEnd="21dp"
+                                card_view:layout_constraintTop_toBottomOf="@id/chipValue"
+                                card_view:layout_constraintStart_toStartOf="parent"
+                                card_view:layout_constraintEnd_toEndOf="parent"
+                                android:drawablePadding="5dp"
+                                android:backgroundTint="@color/white"
+                                card_view:drawableEndCompat="@drawable/ic_chevron_right_white" />
+
+                            <ImageView
+                                android:id="@+id/shopItemLogo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:scaleType="fitCenter"
+                                android:background="@drawable/ic_swiggy"
+                                card_view:layout_constraintBottom_toBottomOf="parent"
+                                card_view:layout_constraintTop_toBottomOf="@id/claimNow" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

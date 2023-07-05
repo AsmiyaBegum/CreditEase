@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">CreditEase</string>
+    <string name="title_home">Home</string>
+    <string name="title_pay">Pay</string>
+    <string name="title_rewards">Rewards</string>
+    <string name="title_empty">Empty Fragment</string>
+    <string name="one_chip_value">1 = %1$s</string>
+    <string name="welcome">Welcome</string>
+    <string name="total_due">TOTAL DUE</string>
+    <string name="pay_now">PAY NOW</string>
+    <string name="your_credit_score">YOUR CREDIT SCORE</string>
+    <string name="powered_by">POWERED BY</string>
+    <string name="very_good">VERY GOOD</string>
+    <string name="action_recommended">ACTION RECOMMENDED</string>
+    <string name="currency_amount">%1$s %2$s</string>
+    <string name="earn_1_percent_chip">Earn 1% CheQ Chips</string>
+    <string name="no_bill_found">No bill found</string>
+    <string name="chips_balance">CHIPS BALANCE</string>
+    <string name="vouchers_amp_cash"><![CDATA[Vouchers & Cash]]></string>
+    <string name="your_vouchers">YOUR VOUCHERS</string>
+    <string name="get_cash_instantly">Get cash instantly!</string>
+    <string name="_1_0_25">1 = ₹0.25</string>
+    <string name="explore_vouchers">EXPLORE VOUCHERS</string>
+    <string name="food">Food</string>
+    <string name="travel">Travel</string>
+    <string name="shopping">Shopping</string>
+    <string name="see_all">See All</string>
+    <string name="featured_deals">FEATURED DEALS</string>
+    <string name="_1_1_00">1 = ₹1.00</string>
+    <string name="other_featured_deals">OTHER FEATURED DEALS</string>
+
+</resources>
