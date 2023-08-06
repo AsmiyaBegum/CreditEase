@@ -6,7 +6,7 @@ The purpose of this application is to enable users to access and monitor their a
 
 **Application Screenshots** :
 
-![Home-Screen](https://github.com/AsmiyaBegum/CreditEase/blob/main/applicationGIF/home_screen.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Movie-Detail-Screen](https://github.com/AsmiyaBegum/CreditEase/blob/main/applicationGIF/reward_screen.gif) 
+![Home-Screen](https://github.com/AsmiyaBegum/CreditEase/blob/main/applicationGIF/home_screen.gif) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![Reward-Screen](https://github.com/AsmiyaBegum/CreditEase/blob/main/applicationGIF/reward_screen.gif) 
 
 **Tech Stack ✨**
 
